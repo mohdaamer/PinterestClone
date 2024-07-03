@@ -1,0 +1,64 @@
+<% include ./partials/header.ejs %>
+<div class="wrapper">
+
+    <!-- Profile Div Starts -->
+    <div class="profile flex items-center justify-center flex-col p-12">
+
+        <!-- fileupload  -->
+         <form id="uploadicon" action="/fileupload" method="post" class="hidden">
+            <input type="file" name="image">
+         </form>
+        <!-- For Image  -->
+        <div class="relative">
+            <span id="upload" class="w-10 h-10 absolute rounded-full flex items-center justify-center right-0 bottom-0 bg-slate-200 cursor-pointer">
+                <i class="text-zinc-800 ri-pencil-fill"></i>
+            </span>
+            <div class="img w-32 h-32 rounded-full bg-black overflow-hidden">
+                <img src="/images/uploads/<%= user.ProfileImage %>" class="w-full h-full" alt="">
+            </div>
+        </div>
+        <!-- Name, Username, Edit, Create New Post  -->
+        <h1 class="md:text-6xl text-4xl tracking-tighter mt-2">Name Here</h1>
+        <a href="#" class="md:mt-2 mt-1">username here</a>
+        <a href="/edit" class="px-4 py-2 bg-slate-200 md:rounded-full rounded-lg capitalize md:mt-4 mt-2 text-lg">edit</a>
+        <button class="px-4 py-2 rounded-lg bg-red-700 text-white font-semibold mt-4 text-sm">Add New Post</button>
+    </div>
+    <!-- Profile Div Ends  -->
+
+    <!-- Post div starts  -->
+    <div class="posts mt-2 w-full h-full px-12 md:py-4">
+        <div class="cards flex flex-wrap md:gap-10 gap-9">
+
+            <!-- Cards starts here  -->
+            <div class="card">
+                <div class="md:w-52 md:h-52 w-32 h-32 bg-slate-200 rounded-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/564x/7f/45/c1/7f45c1ba0f54dddcb932435bcfda1242.jpg" class="h-full w-full object-cover" alt="">
+                </div>
+                <h3 class="text-lg font-bold mt-2">All Pins</h3>
+                <h5>24 Pins</h5>
+            </div>
+
+            <div class="card">
+                <div class="md:w-52 md:h-52 w-32 h-32 bg-slate-200 rounded-lg overflow-hidden">
+                    <img src="https://i.pinimg.com/564x/7f/45/c1/7f45c1ba0f54dddcb932435bcfda1242.jpg" class="h-full w-full object-cover" alt="">
+                </div>
+                <h3 class="text-lg font-bold mt-2">All Pins</h3>
+                <h5>24 Pins</h5>
+            </div>
+            
+            <!-- Cards ends here  -->
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector("#upload").addEventListener("click", function(){
+        document.querySelector("#uploadicon input").click();
+    })
+
+    document.querySelector("#uploadicon input").addEventListener("change", function(){
+        document.querySelector("#uploadicon").submit();
+    })
+</script>
+
+<% include ./partials/footer.ejs %>

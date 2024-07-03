@@ -1,0 +1,19 @@
+<% include ./partials/header.ejs %>
+
+<div class="wrapper w-full h-screen md:bg-[url('https://images.unsplash.com/photo-1718584431955-7b4361e81aea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-[url('https://images.unsplash.com/photo-1719522774293-3b08eae7dd60?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex items-center justify-center bg-cover bg-center">
+
+    <!-- Inner Div  -->
+    <div class="login md:w-[27vw] py-10 px-6 md:px-0 bg-white shadow-md rounded-xl flex items-center justify-center flex-col">
+        <h1 class="md:text-4xl text-2xl tracking-tighter font-semibold">Create an Account</h1>
+        <form action="/register" method="post" class="flex flex-col pt-6">
+            <input type="text" placeholder="username" name="username" class="border border-grey-200 outline-none px-4 pr-16 py-2 rounded-md mb-4">
+            <input type="email" name="email" placeholder="Email" class="border border-grey-200 outline-none px-4 pr-16 py-2 rounded-md mb-4">
+            <input type="password" name="password" class="border border-grey-200 outline-none px-4 pr-16 py-2 rounded-md" placeholder="password">
+            <input type="submit" class="w-full bg-red-600 py-2 rounded-full mt-4 text-white cursor-pointer" value="Create New Account">
+        </form>
+        <a href="/" class="block text-center mt-2 underline text-sm md:text-md">Login to your account</a>
+    </div>
+    <!-- End Inner Div  -->
+</div>
+
+<% include ./partials/footer.ejs %>

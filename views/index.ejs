@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+
+<div class="wrapper w-full h-screen md:bg-[url('https://images.unsplash.com/photo-1719749937847-ab76d3e0dbb7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-[url('https://images.unsplash.com/photo-1719952167449-33940005b007?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex items-center justify-center bg-cover bg-center">
+    <div class="login md:w-[27vw] py-10 px-6 md:px-0 bg-white shadow-md rounded-xl flex items-center justify-center flex-col">
+        <h1 class="md:text-4xl text-2xl tracking-tighter font-semibold">Welcome To Pinterest</h1>
+        <form action="/login" method="post" class="flex flex-col pt-6">
+            <input type="text" name="username" placeholder="username" class="border border-grey-200 outline-none px-4 pr-16 py-2 rounded-md mb-4">
+            <input type="password" name="password" class="border border-grey-200 outline-none px-4 pr-16 py-2 rounded-md" placeholder="password">
+            <a href="#" class="text-sm mt-2">Forget password?</a>
+            <input type="submit" class="w-full bg-red-600 py-2 rounded-full mt-4 text-white cursor-pointer" value="Login">
+        </form>
+        <a href="/register" class="block text-center mt-2 underline text-sm md:text-md">Don't have an account register</a>
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %>
